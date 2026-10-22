@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c8102e" />
+  <title>Popoye Insurance | Payment Automation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Popoye Insurance home">
+      <span class="brand-mark">P</span>
+      <span><strong>POPOYE</strong><small>INSURANCE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#renewal">Renewal</a>
+      <a href="#payment">Payment</a>
+      <a href="#dashboard">Admin Dashboard</a>
+    </nav>
+    <button class="btn btn-outline top-action" id="showDashboardBtn">Open Dashboard</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> SMART INSURANCE PAYMENTS</span>
+        <h1>Renew your policy.<br /><span>Stay protected.</span></h1>
+        <p>Simple, secure two-wheeler insurance renewals with a branded payment experience and instant status tracking.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#renewal">View renewal demo <span aria-hidden="true">→</span></a>
+          <a class="btn btn-light" href="#dashboard">View transactions</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>24/7</strong><span>Renewal access</span></div>
+          <div><strong>3 steps</strong><span>Easy checkout</span></div>
+          <div><strong>100%</strong><span>Responsive demo</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Insurance illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="shield"><span>✓</span></div>
+        <div class="bike-card">
+          <div class="bike-icon">🏍️</div>
+          <div><b>Ride with confidence</b><small>Insurance renewal made easy</small></div>
+        </div>
+        <div class="secure-card"><span class="secure-icon">⌁</span><span><b>Secure checkout</b><small>Protected payment flow</small></span></div>
+        <div class="floating-pill">✓ Policy renewal support</div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="renewal">
+      <div class="section-heading">
+        <div><span class="eyebrow red">HOW IT WORKS</span><h2>From reminder to renewal</h2></div>
+        <p>A sample end-to-end customer journey for your project demo.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card">
+          <span class="step-number">01</span><div class="process-icon red-bg">✉</div>
+          <h3>WhatsApp reminder</h3><p>Customer receives a renewal reminder with a unique payment link.</p>
+          <span class="mini-status"><i></i> Message preview</span>
+        </article>
+        <article class="process-card">
+          <span class="step-number">02</span><div class="process-icon gold-bg">▣</div>
+          <h3>Branded payment page</h3><p>Review customer, vehicle, policy expiry and premium details.</p>
+          <span class="mini-status"><i></i> Customer review</span>
+        </article>
+        <article class="process-card">
+          <span class="step-number">03</span><div class="process-icon green-bg">₹</div>
+          <h3>Pay and confirm</h3><p>Choose a payment method and view a simulated transaction result.</p>
+          <span class="mini-status"><i></i> Demo checkout</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section checkout-layout" id="payment">
+      <div class="section-heading full-width">
+        <div><span class="eyebrow red">CUSTOMER EXPERIENCE</span><h2>Insurance renewal checkout</h2></div>
+        <span class="demo-badge">DEMO MODE</span>
+      </div>
+
+      <article class="panel message-panel">
+        <div class="panel-title"><div class="round-icon whatsapp">◔</div><div><h3>WhatsApp reminder</h3><p>AiSensy message preview</p></div><span class="preview-label">Preview</span></div>
+        <div class="chat-window">
+          <div class="chat-head"><span class="chat-avatar">P</span><span><b>Popoye Insurance</b><small>Business account · Demo</small></span><span class="verified">✓</span></div>
+          <div class="chat-bubble">
+            <p id="whatsappGreeting">Vanakkam Ravi Kumar 👋</p>
+            <p>Your two-wheeler insurance renewal is due soon.</p>
+            <div class="chat-detail"><span>Vehicle number</span><b id="waVehicle">TN38 AB 1234</b></div>
+            <div class="chat-detail"><span>Policy expiry</span><b id="waExpiry">15 Oct 2026</b></div>
+            <div class="chat-detail"><span>Renewal premium</span><b id="waPremium">₹699</b></div>
+            <p>Click below to continue your renewal.</p>
+            <button class="chat-pay" id="waPayBtn">↗ &nbsp; Pay ₹699 securely</button>
+            <small class="chat-time">Today · 10:30 AM</small>
+          </div>
+          <p class="message-note">Actual WhatsApp delivery requires AiSensy API configuration on the backend.</p>
+        </div>
+      </article>
+
+      <article class="panel payment-panel">
+        <div class="panel-title"><div class="round-icon red-icon">P</div><div><h3>Popoye payment page</h3><p>Customer and policy details</p></div><span class="secure-label">♙ Secure demo</span></div>
+        <div class="policy-banner"><span class="banner-shield">✓</span><div><b>Insurance renewal payment</b><small>Your payment should be completed through a trusted gateway.</small></div></div>
+        <div class="field-grid">
+          <label>Customer name<input id="customerName" value="Ravi Kumar" autocomplete="name" /></label>
+          <label>Mobile number<input id="mobileNumber" value="9876543210" inputmode="numeric" maxlength="10" /></label>
+          <label>Vehicle number<input id="vehicleNumber" value="TN38 AB 1234" /></label>
+          <label>Vehicle model<input id="vehicleModel" value="Honda Activa 125" /></label>
+          <label>Policy expiry<input id="policyExpiry" type="date" value="2026-10-15" /></label>
+          <label>Premium amount (₹)<input id="premiumAmount" type="number" min="1" max="100000" value="699" /></label>
+        </div>
+        <div class="amount-row"><span>Total payable</span><strong id="totalAmount">₹699</strong></div>
+        <button class="btn btn-primary btn-block" id="continuePaymentBtn">Continue to payment <span>→</span></button>
+        <p class="fine-print">Demo only. Do not enter real payment credentials or sensitive personal information.</p>
+      </article>
+
+      <article class="panel method-panel">
+        <div class="panel-title"><div class="round-icon blue-icon">₹</div><div><h3>Choose payment method</h3><p>Select an option to preview checkout</p></div></div>
+        <div class="method-list" role="radiogroup" aria-label="Payment method">
+          <button class="method-option selected" data-method="UPI" aria-pressed="true"><span class="method-symbol upi-symbol">UPI</span><span><b>UPI payment</b><small>GPay, PhonePe, Paytm and more</small></span><span class="radio-dot"></span></button>
+          <button class="method-option" data-method="QR Code" aria-pressed="false"><span class="method-symbol qr-symbol">▦</span><span><b>Scan and pay</b><small>QR-code payment preview</small></span><span class="radio-dot"></span></button>
+          <button class="method-option" data-method="Card" aria-pressed="false"><span class="method-symbol card-symbol">▰</span><span><b>Debit / credit card</b><small>Visa, Mastercard and more</small></span><span class="radio-dot"></span></button>
+          <button class="method-option" data-method="Net Banking" aria-pressed="false"><span class="method-symbol bank-symbol">▤</span><span><b>Net banking</b><small>Supported banks via gateway</small></span><span class="radio-dot"></span></button>
+        </div>
+        <div class="method-note"><span>♙</span> Payment details are not collected in this frontend demo.</div>
+        <button class="btn btn-dark btn-block" id="payNowBtn">Pay ₹699 now</button>
+      </article>
+
+      <article class="panel result-panel" id="resultPanel">
+        <div class="result-top"><span class="success-check" id="resultIcon">✓</span><span class="demo-badge">SIMULATED RESULT</span></div>
+        <h3 id="resultTitle">Ready for checkout</h3>
+        <p id="resultDescription">Choose your payment method and click “Pay now” to create a demo transaction.</p>
+        <div class="receipt">
+          <div><span>Order ID</span><b id="receiptOrder">Not created</b></div>
+          <div><span>Customer</span><b id="receiptCustomer">Ravi Kumar</b></div>
+          <div><span>Amount</span><b id="receiptAmount">₹699</b></div>
+          <div><span>Payment method</span><b id="receiptMethod">UPI</b></div>
+          <div><span>Date & time</span><b id="receiptDate">—</b></div>
+          <div><span>Status</span><b class="status-pill status-pending" id="receiptStatus">PENDING</b></div>
+        </div>
+        <button class="btn btn-light btn-block" id="downloadReceiptBtn">↓ Download demo receipt</button>
+        <p class="result-note">A successful demo result is not a real payment or policy issuance.</p>
+      </article>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="section-heading"><div><span class="eyebrow red">SYSTEM OVERVIEW</span><h2>How the system connects</h2></div><p>Target architecture for the full-stack implementation.</p></div>
+      <div class="architecture">
+        <div class="arch-node customer-node"><span>◉</span><b>Customer</b><small>Receives renewal reminder</small></div><span class="arch-arrow">→</span>
+        <div class="arch-node whatsapp-node"><span>◔</span><b>AiSensy WhatsApp API</b><small>Message + unique payment link</small></div><span class="arch-arrow">→</span>
+        <div class="arch-node page-node"><span>▣</span><b>Popoye payment page</b><small>Customer and policy details</small></div><span class="arch-arrow">→</span>
+        <div class="arch-node gateway-node"><span>₹</span><b>Payment gateway</b><small>UPI · Cards · Net banking</small></div>
+        <div class="arch-down">↓ verified webhook</div>
+        <div class="arch-node database-node"><span>▤</span><b>Backend + database</b><small>Orders, status and transactions</small></div><span class="arch-arrow">→</span>
+        <div class="arch-node admin-node"><span>▦</span><b>Admin dashboard</b><small>Reports and Excel export</small></div>
+      </div>
+      <div class="architecture-warning"><b>Production note:</b> Payment status must be updated only after the backend verifies the payment gateway webhook signature. Never trust a browser-only “success” message.</div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard">
+      <div class="section-heading dashboard-heading">
+        <div><span class="eyebrow red">ADMINISTRATION</span><h2>Payment transactions</h2><p class="section-subtitle">Review sample records, search customers and export the table.</p></div>
+        <button class="btn btn-primary" id="exportCsvBtn">↓ Export to CSV</button>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><span>Total transactions</span><strong id="totalCount">5</strong><small>All demo records</small></div>
+        <div class="stat-card"><span>Paid</span><strong class="green-text" id="paidCount">2</strong><small>Payment completed</small></div>
+        <div class="stat-card"><span>Pending</span><strong class="gold-text" id="pendingCount">2</strong><small>Awaiting confirmation</small></div>
+        <div class="stat-card"><span>Failed</span><strong class="red-text" id="failedCount">1</strong><small>Needs review</small></div>
+      </div>
+      <div class="panel transactions-panel">
+        <div class="table-toolbar">
+          <div class="filter-tabs" role="group" aria-label="Filter transactions">
+            <button class="filter-tab active" data-filter="All">All <span id="allTabCount">5</span></button>
+            <button class="filter-tab" data-filter="PAID">Paid <span id="paidTabCount">2</span></button>
+            <button class="filter-tab" data-filter="PENDING">Pending <span id="pendingTabCount">2</span></button>
+            <button class="filter-tab" data-filter="FAILED">Failed <span id="failedTabCount">1</span></button>
+          </div>
+          <label class="search-box"><span>⌕</span><input id="searchInput" placeholder="Search name, mobile or vehicle..." /></label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Customer</th><th>Mobile</th><th>Vehicle number</th><th>Premium</th><th>Payment method</th><th>Payment status</th><th>Policy status</th><th>Order ID</th></tr></thead>
+            <tbody id="transactionTableBody"></tbody>
+          </table>
+          <div class="empty-state hidden" id="emptyState">No transactions match your search.</div>
+        </div>
+        <div class="table-footer"><span id="tableSummary">Showing 5 transactions</span><span>Sample data · Frontend prototype</span></div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="section-heading"><div><span class="eyebrow red">PROJECT CHECKLIST</span><h2>What the complete system will include</h2></div></div>
+      <div class="feature-grid">
+        <div class="feature-item"><span>✓</span><div><b>Branded payment page</b><small>Mobile-friendly Popoye checkout</small></div></div>
+        <div class="feature-item"><span>✓</span><div><b>Unique order IDs</b><small>Prevent duplicate order processing</small></div></div>
+        <div class="feature-item"><span>✓</span><div><b>AiSensy integration</b><small>Renewal and payment confirmation templates</small></div></div>
+        <div class="feature-item"><span>✓</span><div><b>Verified webhooks</b><small>Secure payment status updates</small></div></div>
+        <div class="feature-item"><span>✓</span><div><b>Admin dashboard</b><small>Search, filters and reports</small></div></div>
+        <div class="feature-item"><span>✓</span><div><b>Excel-compatible export</b><small>CSV report for spreadsheet software</small></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark">P</span><span><strong>POPOYE</strong><small>INSURANCE</small></span></a><p>Payment Automation System · Project prototype</p><span>© <span id="year"></span> Popoye Insurance demo</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
